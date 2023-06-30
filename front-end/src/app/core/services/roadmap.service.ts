@@ -36,4 +36,8 @@ export class RoadmapService {
   getRoadmapById(idUser: any) {
     return this.http.get(`${this.API_USER}/${idUser}`);
   }
+
+  deleteRoadmap(idRoadmap: any) {
+    return this.http.delete(`${this.API_ROADMAP}/${idRoadmap}`);
+  }
 }

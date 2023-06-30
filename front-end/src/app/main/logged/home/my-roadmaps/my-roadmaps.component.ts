@@ -20,13 +20,16 @@ export class MyRoadmapsComponent implements OnInit {
       res => {
         const user: any = res;
         this.arrRoadmap = user.roadMaps;
-        console.log(user.roadMaps);
       }
     )
   }
 
   deleteRoadmap(idRoadmap: any) {
-    console.log(idRoadmap);
-  }
+    this.roadmapService.deleteRoadmap(idRoadmap).subscribe(
+      res => {
+        window.location.reload();
+      }
+    )
 
+  }
 }
