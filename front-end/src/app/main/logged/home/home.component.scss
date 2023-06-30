@@ -1,0 +1,74 @@
+@import '../../../../styles.scss';
+
+.nav-bar {
+  height: 250px;
+  // background: $gunmetal-theme;
+
+  background-image: url("../../../../assets/img/city-easytravel-1.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  .transparent-bg {
+    background-color: rgba(0, 0, 0, 0.356);
+    height: 250px;
+  }
+
+  .title {
+    font-family: $title-font;
+    font-size: 70px;
+    color: rgb(235, 235, 235);
+    cursor: pointer;
+  }
+
+  border-bottom: solid 3px #FFF;
+  color: #FFF;
+
+  h3 {
+    font-size: 14px;
+    cursor: pointer;
+  }
+
+  h3:hover {
+    color: rgba(255, 255, 255, 0.753);
+  }
+
+  .user-area {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+
+    .account {
+      border-right: solid 2px #FFF;
+    }
+  }
+}
+
+.sub-navbar {
+  height: 50px;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 27%, rgba(5,109,187,1) 71%, rgba(0,212,255,1) 100%);
+  color: #FFF;
+  font-weight: 600;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+
+  .row {
+    div {
+      height: 50px;
+      display: grid;
+      align-content: center;
+      cursor: pointer;
+    }
+
+    div:hover {
+      transition: calc(0.5s);
+      background: $dark-carrot-orange-theme;
+      transform: scale(1.04);
+    }
+  }
+}
+
+section {
+  height: calc(100vh - 220px);
+}

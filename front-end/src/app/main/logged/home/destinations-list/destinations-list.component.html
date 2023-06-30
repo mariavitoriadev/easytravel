@@ -1,0 +1,19 @@
+<section class="content">
+  <div class="container pt-3">
+    <div class="d-flex justify-content-center flex-wrap">
+
+      <div *ngFor="let item of data">
+        <div class="card m-4 col-md-4" style="width: 18rem;">
+          <img src="../../../../../assets/img/aviao-easytravel-1.jpg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.cidade }} - {{ item.estado }}</h5>
+            <p class="card-text">Valor: R${{ item.preco }}</p>
+            <p class="card-text">Embarque: {{ item.embarque }}</p>
+            <p class="card-text">Descrição: {{ item.descricao }}</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
