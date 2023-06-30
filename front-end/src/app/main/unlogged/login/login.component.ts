@@ -30,16 +30,6 @@ export class LoginComponent implements OnInit {
 
   }
 
-  // parseJwt(token: any) {
-  //   var base64Url = token.split('.')[1];
-  //   var base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-  //   var jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-  //       return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-  //   }).join(''));
-
-  //   return JSON.parse(jsonPayload);
-  // };
-
   async sendLoginForm() {
     const userForm: UserLogin = {
       email: this.loginForm.get('email')?.value,
@@ -55,7 +45,6 @@ export class LoginComponent implements OnInit {
         localStorage.setItem("idUser", parseJwt(response).sub)
         id = parseJwt(response).sub;
         this.addName(id);
-        console.log(parseJwt(response))
         this.alertService.showAlertSuccess("Login efetuado com sucesso!");
         this.router.navigate([''])
       },
@@ -64,15 +53,6 @@ export class LoginComponent implements OnInit {
       },
     )
 
-    // return await this.userService.getUserById(id).subscribe(
-    //   response => {
-    //     const res: any = response;
-    //     localStorage.setItem("Username", res.username);
-    //   },
-    //   error => {
-    //     console.error("ERROR: ", error)
-    //   }
-    // )
   }
 
   addName(id: any) {

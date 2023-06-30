@@ -34,11 +34,6 @@ public class DestinyController {
         return ResponseEntity.ok().body(destiny);
     }
 
-    @PutMapping("/{destinyId}/admin/{adminId}")
-    Destiny addDestinyToAdmin(@PathVariable Long destinyId, @PathVariable Long adminId) throws IllegalAccessException {
-        Destiny destiny = destinyRepository.findById(destinyId).orElseThrow(() -> new EntityNotFoundException("Destiny not found on :: " + destinyId));
-        return destinyRepository.save(destiny);
-    }
 
     @PostMapping
      Destiny createDestiny( @RequestBody Destiny destiny) {
@@ -66,7 +61,7 @@ public class DestinyController {
     }
 
     @DeleteMapping("/{id}")
-     Map<String, Boolean> deleteAdmin(@PathVariable(value = "id") Long id) throws Exception {
+     Map<String, Boolean> deleteDestiny(@PathVariable(value = "id") Long id) throws Exception {
         Destiny destiny =
                 destinyRepository
                         .findById(id)

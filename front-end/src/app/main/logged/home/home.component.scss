@@ -1,8 +1,10 @@
 @import '../../../../styles.scss';
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap");
+
 
 .nav-bar {
   height: 250px;
-  background-image: url("../../../../assets/img/city-easytravel-1.jpg");
+  background-image: url("../../../../assets/img/aviao-easytravelbg.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -36,6 +38,8 @@
     flex-direction: column;
     align-items: flex-end;
     justify-content: center;
+    font-weight: 500;
+    font-family: "Open Sans", sans-serif;
 
     .account {
       border-right: solid 2px #FFF;
@@ -45,7 +49,7 @@
 
 .sub-navbar {
   height: 50px;
-  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 27%, rgba(5,109,187,1) 71%, rgba(0,212,255,1) 100%);
+  background: rgba(5,109,187,1) ;
   color: #FFF;
   font-weight: 600;
   border-bottom-left-radius: 15px;
@@ -64,6 +68,11 @@
       background: $dark-carrot-orange-theme;
       transform: scale(1.04);
     }
+  }
+
+  .col-sm {
+    font-family: "Open Sans", sans-serif;
+
   }
 }
 

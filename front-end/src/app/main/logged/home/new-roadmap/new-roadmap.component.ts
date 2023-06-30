@@ -41,7 +41,6 @@ export class NewRoadmapComponent implements OnInit {
   }
 
   addDestinies(id: any, price: any) {
-    console.log(this.totalValue);
     if (!this.arrDestinies.includes(id)) {
       this.arrDestinies.push(id);
       this.totalValue += price;
@@ -62,7 +61,6 @@ export class NewRoadmapComponent implements OnInit {
 
     let idUser = localStorage.getItem('idUser');
 
-    console.log(newRoadmap);
 
     this.roadmapService.newRoadmap(newRoadmap).subscribe(
       success => {
